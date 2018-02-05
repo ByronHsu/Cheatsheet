@@ -65,3 +65,23 @@ app.stage.addChild(new PIXI.display.Layer(greenGroup));
 var bunny = new PIXI.Sprite(texture_blue);
 bunny.parentGroup = blueGroup;
 ```
+
+### Shell
+
+- kill port
+
+```
+ kill -9 $(lsof -i:3000 -t)
+```
+
+### GIF
+
+```
+ffmpeg -i in.mov -s 600x400 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > out.gif
+```
+
+### GITHUB SSH
+
+```
+ssh-add ~/.ssh/id_rsa 
+```
